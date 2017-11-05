@@ -1,0 +1,7 @@
+stages:
+  - build
+
+build_job:
+  stage: build
+  image: maven:3-jdk-8
+  script: mvn clean install
