@@ -1,2 +1,6 @@
-
-/hexagono-parent.iml
+/target/
+/.settings/
+/.classpath
+/.project
+/.idea/
+/*.iml
