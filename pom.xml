@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.hexagonoframework</groupId>
+	<groupId>com.github.hexagonoframework</groupId>
 	<artifactId>hexagono-parent</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Hexagono Framework Parent</name>
     <description>Projeto parent para demais projetos do framework Hexagono</description>
-    <url>https://github.com/hexagono-framework/hexagono-parent</url>
+    <url>https://github.com/hexagonoframework/hexagono-parent</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,7 +18,7 @@
 
     <organization>
         <name>HEXAGONO Framework</name>
-        <url>https://github.com/hexagono-framework</url>
+        <url>https://github.com/hexagonoframework</url>
     </organization>
 
     <licenses>
@@ -34,28 +34,27 @@
             <name>Rodolfo BA</name>
             <url>https://github.com/rodolfoba</url>
             <organization>HEXAGONO Framework</organization>
-            <organizationUrl>https://github.com/hexagono-framework</organizationUrl>
+            <organizationUrl>https://github.com/hexagonoframework</organizationUrl>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/hexagono-framework/hexagono-parent.git</connection>
-        <developerConnection>scm:git:ssh://github.com:hexagono-framework/hexagono-parent.git</developerConnection>
-        <url>http://github.com/hexagono-framework/hexagono-parent</url>
+        <connection>scm:git:git://github.com/hexagonoframework/hexagono-parent.git</connection>
+        <developerConnection>scm:git:ssh://github.com:hexagonoframework/hexagono-parent.git</developerConnection>
+        <url>https://github.com/hexagonoframework/hexagono-parent</url>
     </scm>
 
     <distributionManagement>
         <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
+            <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
-            <id>sonatype-nexus-staging</id>
+            <id>ossrh</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 
-    <!--
     <build>
         <plugins>
             <plugin>
@@ -74,6 +73,5 @@
             </plugin>
         </plugins>
     </build>
-    -->
 
 </project>
