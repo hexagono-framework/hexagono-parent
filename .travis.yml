@@ -11,6 +11,6 @@ deploy:
     script: .travis-ci/deploy.sh
     skip_cleanup: true
     on:
-      repo: rodolfoba/hexagonoframework/hexagono-parent
+      repo: hexagonoframework/hexagono-parent
       tags: true
       jdk: oraclejdk8
