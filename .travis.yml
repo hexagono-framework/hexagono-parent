@@ -1,1 +1,16 @@
 language: java
+
+jdk:
+  - oraclejdk8
+
+script: mvn --settings .travis-ci/settings.xml clean verify
+
+deploy:
+  -
+    provider: script
+    script: .travis-ci/deploy.sh
+    skip_cleanup: true
+    on:
+      repo: rodolfoba/hexagonoframework/hexagono-parent
+      tags: true
+      jdk: oraclejdk8
