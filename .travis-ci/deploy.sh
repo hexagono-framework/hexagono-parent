@@ -16,7 +16,7 @@ then
     mvn clean deploy --settings .travis-ci/settings.xml -DskipTests=true --batch-mode --update-snapshots -Prelease
 else
     echo "not on a tag -> keep snapshot version in pom.xml"
-    mvn clean deploy --settings .travis-ci/settings.xml -DskipTests=true -B -U
+    mvn clean deploy --settings .travis-ci/settings.xml -P release -DskipTests=true -B -U
 fi
 
 if [ ! -z "$TRAVIS" ]; then
