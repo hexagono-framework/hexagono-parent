@@ -9,13 +9,16 @@ language: java
 jdk:
   - oraclejdk8
 
+install: true
+test: true
 
 before_deploy:
   - openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in .travis-ci/pubring.gpg.enc -out .travis-ci/pubring.gpg -d
   - openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in .travis-ci/secring.gpg.enc -out .travis-ci/secring.gpg -d
 
 deploy:
-  script: mvn deploy --settings .travis-ci/settings.xml -P release
+  provider: script
+  script: mvn clean deploy --settings .travis-ci/settings.xml -P release
   on:
     repo: hexagonoframework/hexagono-parent
     branch: master
