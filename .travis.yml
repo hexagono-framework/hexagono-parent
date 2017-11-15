@@ -10,7 +10,6 @@ jdk:
   - oraclejdk8
 
 install: true
-test: true
 
 before_deploy:
   - openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in .travis-ci/pubring.gpg.enc -out .travis-ci/pubring.gpg -d
@@ -19,6 +18,7 @@ before_deploy:
 deploy:
   provider: script
   script: mvn clean deploy --settings .travis-ci/settings.xml -P release
+  skip_cleanup: true
   on:
     repo: hexagonoframework/hexagono-parent
     branch: master
