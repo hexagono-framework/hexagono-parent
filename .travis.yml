@@ -5,6 +5,8 @@ jdk:
 
 install: true
 
+script: true
+
 before_deploy:
   - openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in .travis-ci/pubring.gpg.enc -out .travis-ci/pubring.gpg -d
   - openssl aes-256-cbc -pass pass:$ENCRYPTION_PASSWORD -in .travis-ci/secring.gpg.enc -out .travis-ci/secring.gpg -d

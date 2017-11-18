@@ -5,7 +5,7 @@
 
 	<groupId>com.github.hexagonoframework</groupId>
 	<artifactId>hexagono-parent</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<packaging>pom</packaging>
 
 	<name>Hexagono Framework Parent</name>
@@ -43,6 +43,19 @@
         <developerConnection>scm:git:ssh://github.com:hexagonoframework/hexagono-parent.git</developerConnection>
         <url>https://github.com/hexagonoframework/hexagono-parent</url>
     </scm>
+
+    <repositories>
+        <repository>
+            <id>ossrh-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <profiles>
         <profile>
